@@ -10,19 +10,19 @@
 <body>
     <header>
         <div class="header-container">
-            <h1 class="logo">
-                BarterBee
+            <div class="logo">
+                <span>BarterBee</span>
                 <img src="assets/logo.png" alt="BarterBee Logo" class="logo-image">
-            </h1>
+            </div>
             <p class="tagline">Trade what you have, gain what you need</p>
             <nav>
                 <ul>
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#trade-match">Trade Match</a></li>
                     <li><a href="#shop">Shop</a></li>
-                    <li><a href="#recipes">Recipes Blog</a></li>
                     <li><a href="#videos">Videos</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="login.html" target="_blank">Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -43,7 +43,7 @@
             </div>
         </section>
 
-        <section class="features">
+        <section class="features" id="trade-match">
             <div class="feature-card">
                 <i class="fas fa-exchange-alt"></i>
                 <h3>Easy Trading</h3>
@@ -60,6 +60,48 @@
                 <p>Join our growing community</p>
             </div>
         </section>
+
+        <section class="shop" id="shop">
+            <h2>Featured Items</h2>
+            <div class="shop-grid">
+                <div class="shop-item">
+                    <img src="assets/honey.jpg" alt="Organic Honey">
+                    <h3>Organic Honey</h3>
+                    <p>Pure, natural honey from local beekeepers</p>
+                    <button class="shop-button">Trade Now</button>
+                </div>
+                <div class="shop-item">
+                    <img src="assets/tea.jpg" alt="Herbal Tea">
+                    <h3>Herbal Tea</h3>
+                    <p>Premium quality herbal tea blends</p>
+                    <button class="shop-button">Trade Now</button>
+                </div>
+                <div class="shop-item">
+                    <img src="assets/soap.jpg" alt="Handmade Soap">
+                    <h3>Handmade Soap</h3>
+                    <p>Natural, handmade soap products</p>
+                    <button class="shop-button">Trade Now</button>
+                </div>
+                <div class="shop-item">
+                    <img src="assets/shampoo.jpg" alt="Natural Shampoo">
+                    <h3>Natural Shampoo</h3>
+                    <p>Organic shampoo with natural ingredients</p>
+                    <button class="shop-button">Trade Now</button>
+                </div>
+                <div class="shop-item">
+                    <img src="assets/cosmetic.jpg" alt="Organic Cosmetics">
+                    <h3>Organic Cosmetics</h3>
+                    <p>Natural and organic beauty products</p>
+                    <button class="shop-button">Trade Now</button>
+                </div>
+                <div class="shop-item">
+                    <img src="assets/organic-food.jpg" alt="Organic Food">
+                    <h3>Organic Food</h3>
+                    <p>Fresh organic produce and products</p>
+                    <button class="shop-button">Trade Now</button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -68,10 +110,9 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#shop">Shop</a></li>
-                        <li><a href="#recipes">Recipes</a></li>
-                        <li><a href="#about">About</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#shop">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
