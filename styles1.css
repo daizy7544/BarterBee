@@ -1,0 +1,287 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 36px;
+    color: #fffefc;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 16px;
+    color: gray;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f1b600;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #f1b600;
+    padding: 50px;
+}
+
+.hero-text {
+    max-width: 40%;
+    color: black;
+}
+
+.hero-text h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 18px;
+}
+
+button {
+    background: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hero-image img {
+    width: 350px;
+    border-radius: 5px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo-image {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+}
+footer {
+    background-color: #f1a800; /* Yellow background */
+    /* Step 1: Add padding and text styling for the footer */
+    padding: 40px 20px;
+    color: #333; /* Darker text for better contrast */
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+    /* Step 2: Create a container for footer sections */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px; /* Add spacing between sections */
+}
+
+    /* Step 3: Style footer links */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin: 10px 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #333; /* Darker text for better readability */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #000; /* Slightly darker hover effect */
+}
+
+    /* Step 4: Style contact section */
+.footer-contact h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+    /* Step 5: Style the footer form */
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align form elements to the left */
+}
+
+.footer-form label {
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.footer-form input,
+.footer-form textarea {
+    width: 100%; /* Make inputs responsive */
+    max-width: 300px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc; /* Softer border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px;
+}
+
+.footer-form button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #333; /* Darker button color */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-form button:hover {
+    background-color: #555; /* Slightly lighter hover effect */
+}
+
+    /* Step 6: Add a footer note */
+.footer-note {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666; /* Subtle text color for notes */
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #ffcc00;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    color: #ff6600;
+}
+
+/* Main Content */
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    color: #ff6600;
+}
+
+/* Product List */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.product p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Trade Button */
+.trade-btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.trade-btn:hover {
+    background-color: #cc5500;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
