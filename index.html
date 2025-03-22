@@ -17,13 +17,26 @@
             <p class="tagline">Trade what you have, gain what you need</p>
             <nav>
                 <ul>
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#trade-match">Trade Match</a></li>
-                    <li><a href="#shop">Shop</a></li>
-                    <li><a href="#videos">Videos</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#trade-match">Trade Match</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="videos.html">Videos</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="login.html" target="_blank">Login</a></li>
                 </ul>
+                <div class="beecoin-container">
+                    <div class="beecoin-balance">
+                        <i class="fas fa-coins"></i>
+                        <span class="beecoin-amount">1000</span>
+                    </div>
+                    <button class="add-beecoin">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Search items..." id="searchInput">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
             </nav>
         </div>
     </header>
@@ -46,7 +59,7 @@
         <section class="features" id="trade-match">
             <div class="feature-card">
                 <i class="fas fa-exchange-alt"></i>
-                <h3>Easy Trading</h3>
+                <h3>Easy Trading</h3> 
                 <p>Simple and secure barter transactions</p>
             </div>
             <div class="feature-card">
@@ -68,7 +81,7 @@
                     <img src="assets/honey.jpg" alt="Organic Honey">
                     <h3>Organic Honey</h3>
                     <p>Pure, natural honey from local beekeepers</p>
-                    <button class="shop-button">Trade Now</button>
+                    <a href="shop.html" class="shop-button">View All Products</a>
                 </div>
                 <div class="shop-item">
                     <img src="assets/tea.jpg" alt="Herbal Tea">
@@ -102,6 +115,92 @@
                 </div>
             </div>
         </section>
+
+        <section class="how-it-works" id="how-it-works">
+            <h2>How BarterBee Works</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-user-plus"></i>
+                    <h3>Create Account</h3>
+                    <p>Sign up and create your profile</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-box"></i>
+                    <h3>List Items</h3>
+                    <p>Upload items you want to trade</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-search"></i>
+                    <h3>Find Matches</h3>
+                    <p>Browse and find items you want</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <i class="fas fa-handshake"></i>
+                    <h3>Trade</h3>
+                    <p>Complete secure transactions</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials" id="testimonials">
+            <h2>What Our Users Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"BarterBee made trading so easy! I found exactly what I needed."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/user1.jpg" alt="Pathak">
+                        <div>
+                            <h4>Pathak</h4>
+                            <p>Verified User</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"The community is amazing and the platform is very secure."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/user2.jpg" alt="Ruchika">
+                        <div>
+                            <h4>Ruchika</h4>
+                            <p>Verified User</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"Best bartering platform I've ever used. Highly recommended!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/user3.jpg" alt="Rakesh">
+                        <div>
+                            <h4>Rakesh</h4>
+                            <p>Verified User</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter" id="newsletter">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for the latest updates and exclusive offers</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -111,7 +210,7 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#shop">Shop</a></li>
+                        <li><a href="shop.html">Shop</a></li>
                         <li><a href="about.html">About</a></li>
                     </ul>
                 </div>
