@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Barter</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Barter Logo" class="logo-image">
+                <span>Barter</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="register-page">
+        <div class="register-container">
+            <h1 class="register-title">Create Account</h1>
+            <form id="registerForm" class="register-form">
+                <div class="form-group">
+                    <label for="user-id">User ID</label>
+                    <input type="text" id="user-id" required placeholder="Enter your user ID">
+                </div>
+                
+                <div class="form-group">
+                    <label for="user-name">Full Name</label>
+                    <input type="text" id="user-name" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="user-password">Password</label>
+                    <input type="password" id="user-password" required placeholder="Enter your password">
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" required placeholder="Confirm your password">
+                </div>
+
+                <button type="submit" class="register-button">Register</button>
+            </form>
+            <p class="login-link">Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const userId = document.getElementById('user-id').value;
+            const userName = document.getElementById('user-name').value;
+            const password = document.getElementById('user-password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            // Basic validation
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+
+            try {
+                // Here you would make an API call to your backend
+                // const response = await fetch('/api/register', {
+                //     method: 'POST',
+                //     headers: {
+                //         'Content-Type': 'application/json'
+                //     },
+                //     body: JSON.stringify({
+                //         id: userId,
+                //         name: userName
+                //     })
+                // });
+
+                // For demo purposes, we'll simulate a successful registration
+                const success = true; // This would come from your backend response
+
+                if (success) {
+                    alert('Registration successful!');
+                    // Store user data in localStorage
+                    localStorage.setItem('currentUser', JSON.stringify({
+                        id: userId,
+                        name: userName,
+                        beeCoins: 0
+                    }));
+                    // Redirect to shop page
+                    window.location.href = 'shop.html';
+                } else {
+                    alert('Registration failed. User ID might already exist.');
+                }
+            } catch (error) {
+                console.error('Error during registration:', error);
+                alert('Error during registration. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html> 

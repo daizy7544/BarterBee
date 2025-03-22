@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarterBee - Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span>BarterBee</span>
+                <img src="assets/logo.png" alt="BarterBee Logo" class="logo-image">
+            </div>
+            <p class="tagline">Trade what you have, gain what you need</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#trade-match">Trade Match</a></li>
+                    <li><a href="shop.html" class="active">Shop</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+                <div class="beecoin-container">
+                    <div class="beecoin-balance">
+                        <i class="fas fa-coins"></i>
+                        <span class="beecoin-amount">1000</span>
+                    </div>
+                    <button class="add-beecoin">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Search items..." id="searchInput">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="shop-page">
+        <div class="shop-filters">
+            <div class="filter-section">
+                <h3>Categories</h3>
+                <ul class="category-list">
+                    <li><a href="#" data-category="all" class="active">All Items</a></li>
+                    <li><a href="#" data-category="food">Food & Beverages</a></li>
+                    <li><a href="#" data-category="cosmetics">Cosmetics</a></li>
+                    <li><a href="#" data-category="clothing">Clothing</a></li>
+                    <li><a href="#" data-category="electronics">Electronics</a></li>
+                    <li><a href="#" data-category="home">Home & Living</a></li>
+                </ul>
+            </div>
+            <div class="filter-section">
+                <h3>Price Range</h3>
+                <div class="price-range">
+                    <input type="range" min="0" max="1000" value="500" id="priceRange">
+                    <div class="price-inputs">
+                        <input type="number" id="minPrice" placeholder="Min" min="0">
+                        <span>-</span>
+                        <input type="number" id="maxPrice" placeholder="Max" min="0">
+                    </div>
+                </div>
+            </div>
+            <div class="filter-section">
+                <h3>Sort By</h3>
+                <select id="sortSelect">
+                    <option value="newest">Newest First</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="popular">Most Popular</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="shop-grid" id="shopGrid">
+            <!-- Shop items will be dynamically loaded here -->
+        </div>
+
+        <div class="pagination">
+            <button class="page-btn" id="prevPage"><i class="fas fa-chevron-left"></i></button>
+            <span class="page-info">Page <span id="currentPage">1</span> of <span id="totalPages">1</span></span>
+            <button class="page-btn" id="nextPage"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </main>
+
+    <!-- Trade Modal -->
+    <div class="modal" id="tradeModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Initiate Trade</h2>
+            <div class="trade-details">
+                <div class="item-you-want">
+                    <h3>Item You Want</h3>
+                    <div class="selected-item">
+                        <!-- Selected item details will be inserted here -->
+                    </div>
+                </div>
+                <div class="your-items">
+                    <h3>Your Items</h3>
+                    <div class="your-items-grid">
+                        <!-- User's items will be loaded here -->
+                    </div>
+                </div>
+            </div>
+            <div class="trade-actions">
+                <button class="cancel-trade">Cancel</button>
+                <button class="confirm-trade">Confirm Trade</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#shipping">Shipping & Returns</a></li>
+                        <li><a href="#policy">Store Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h4>CONTACT US</h4>
+                <p><i class="fas fa-phone"></i> +91 9463190860</p>
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@barterbee.com">info@barterbee.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 BarterBee. Powered and secured by Chandigarh University.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Shop page specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sample shop items data
+            const shopItems = [
+                {
+                    id: 1,
+                    name: "Organic Honey",
+                    category: "food",
+                    price: 500,
+                    image: "assets/honey.jpg",
+                    description: "Pure, natural honey from local beekeepers",
+                    seller: "Pathak",
+                    rating: 4.5,
+                    reviews: 12
+                },
+                {
+                    id: 2,
+                    name: "Herbal Tea",
+                    category: "food",
+                    price: 300,
+                    image: "assets/tea.jpg",
+                    description: "Premium quality herbal tea blends",
+                    seller: "Ruchika",
+                    rating: 4.8,
+                    reviews: 8
+                },
+                {
+                    id: 3,
+                    name: "Handmade Soap",
+                    category: "cosmetics",
+                    price: 200,
+                    image: "assets/soap.jpg",
+                    description: "Natural, handmade soap products",
+                    seller: "Rakesh",
+                    rating: 4.2,
+                    reviews: 15
+                },
+                // Add more items as needed
+            ];
+
+            // Function to render shop items
+            function renderShopItems(items) {
+                const shopGrid = document.getElementById('shopGrid');
+                shopGrid.innerHTML = items.map(item => `
+                    <div class="shop-item" data-id="${item.id}">
+                        <img src="${item.image}" alt="${item.name}">
+                        <h3>${item.name}</h3>
+                        <p>${item.description}</p>
+                        <div class="item-details">
+                            <span class="price">${item.price} BeeCoins</span>
+                            <span class="seller">Seller: ${item.seller}</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <span>${item.rating}</span>
+                                <span>(${item.reviews} reviews)</span>
+                            </div>
+                        </div>
+                        <button class="trade-button" onclick="initiateTrade(${item.id})">Trade Now</button>
+                    </div>
+                `).join('');
+            }
+
+            // Initialize shop with all items
+            renderShopItems(shopItems);
+
+            // Category filter functionality
+            const categoryLinks = document.querySelectorAll('.category-list a');
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const category = e.target.dataset.category;
+                    
+                    // Update active category
+                    categoryLinks.forEach(l => l.classList.remove('active'));
+                    e.target.classList.add('active');
+
+                    // Filter items
+                    const filteredItems = category === 'all' 
+                        ? shopItems 
+                        : shopItems.filter(item => item.category === category);
+                    
+                    renderShopItems(filteredItems);
+                });
+            });
+
+            // Price range filter
+            const priceRange = document.getElementById('priceRange');
+            const minPrice = document.getElementById('minPrice');
+            const maxPrice = document.getElementById('maxPrice');
+
+            priceRange.addEventListener('input', (e) => {
+                maxPrice.value = e.target.value;
+                filterByPrice();
+            });
+
+            minPrice.addEventListener('input', filterByPrice);
+            maxPrice.addEventListener('input', filterByPrice);
+
+            function filterByPrice() {
+                const min = parseInt(minPrice.value) || 0;
+                const max = parseInt(maxPrice.value) || Infinity;
+                
+                const filteredItems = shopItems.filter(item => 
+                    item.price >= min && item.price <= max
+                );
+                
+                renderShopItems(filteredItems);
+            }
+
+            // Sort functionality
+            const sortSelect = document.getElementById('sortSelect');
+            sortSelect.addEventListener('change', (e) => {
+                const sortBy = e.target.value;
+                let sortedItems = [...shopItems];
+
+                switch(sortBy) {
+                    case 'price-low':
+                        sortedItems.sort((a, b) => a.price - b.price);
+                        break;
+                    case 'price-high':
+                        sortedItems.sort((a, b) => b.price - a.price);
+                        break;
+                    case 'newest':
+                        sortedItems.sort((a, b) => b.id - a.id);
+                        break;
+                    case 'popular':
+                        sortedItems.sort((a, b) => b.reviews - a.reviews);
+                        break;
+                }
+
+                renderShopItems(sortedItems);
+            });
+
+            // Search functionality
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                const filteredItems = shopItems.filter(item => 
+                    item.name.toLowerCase().includes(searchTerm) ||
+                    item.description.toLowerCase().includes(searchTerm)
+                );
+                renderShopItems(filteredItems);
+            });
+
+            // Trade modal functionality
+            window.initiateTrade = function(itemId) {
+                const item = shopItems.find(i => i.id === itemId);
+                const modal = document.getElementById('tradeModal');
+                const selectedItem = modal.querySelector('.selected-item');
+
+                selectedItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <h4>${item.name}</h4>
+                    <p>${item.description}</p>
+                    <span class="price">${item.price} BeeCoins</span>
+                `;
+
+                modal.style.display = 'block';
+            };
+
+            // Close modal functionality
+            const closeModal = document.querySelector('.close-modal');
+            const cancelTrade = document.querySelector('.cancel-trade');
+            const modal = document.getElementById('tradeModal');
+
+            closeModal.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            cancelTrade.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // Confirm trade functionality
+            const confirmTrade = document.querySelector('.confirm-trade');
+            confirmTrade.addEventListener('click', () => {
+                // Add your trade confirmation logic here
+                alert('Trade initiated successfully! The seller will contact you shortly.');
+                modal.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarterBee - Advanced Barter Exchange System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span>BarterBee</span>
+                <img src="assets/logo.png" alt="BarterBee Logo" class="logo-image">
+            </div>
+            <p class="tagline">Trade what you have, gain what you need</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#trade-match">Trade Match</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="videos.html">Videos</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="login.html" target="_blank">Login</a></li>
+                </ul>
+                <div class="beecoin-container">
+                    <div class="beecoin-balance">
+                        <i class="fas fa-coins"></i>
+                        <span class="beecoin-amount">1000</span>
+                    </div>
+                    <button class="add-beecoin">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Search items..." id="searchInput">
+                    <button type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>Welcome to BarterBee</h2>
+                    <p>Your Advanced Barter Exchange System</p>
+                    <p class="subtitle">Trade Smarter, Exchange Better</p>
+                    <button class="cta-button">EX-CHANGE</button>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/hero-image.jpg" alt="Smiling woman in a kitchen">
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="trade-match">
+            <div class="feature-card">
+                <i class="fas fa-exchange-alt"></i>
+                <h3>Easy Trading</h3> 
+                <p>Simple and secure barter transactions</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure Platform</h3>
+                <p>Your trades are safe with us</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-users"></i>
+                <h3>Community Driven</h3>
+                <p>Join our growing community</p>
+            </div>
+        </section>
+
+        <section class="shop" id="shop">
+            <h2>Featured Items</h2>
+            <div class="shop-grid">
+                <div class="shop-item">
+                    <img src="assets/honey.jpg" alt="Organic Honey">
+                    <h3>Organic Honey</h3>
+                    <p>Pure, natural honey from local beekeepers</p>
+                    <a href="shop.html" class="shop-button">View All Products</a>
+                </div>
+                <div class="shop-item">
+                    <img src="assets/tea.jpg" alt="Herbal Tea">
+                    <h3>Herbal Tea</h3>
+                    <p>Premium quality herbal tea blends</p>
+                    <button class="shop-button">Trade Now</button>
+                </div>
+                <div class="shop-item">
+                    <img src="assets/soap.jpg" alt="Handmade Soap">
+                    <h3>Handmade Soap</h3>
+                    <p>Natural, handmade soap products</p>
+                    <button class="shop-button">Trade Now</button>
+                </div>
+                <div class="shop-item">
+                    <img src="assets/shampoo.jpg" alt="Natural Shampoo">
+                    <h3>Natural Shampoo</h3>
+                    <p>Organic shampoo with natural ingredients</p>
+                    <button class="shop-button">Trade Now</button>
+                </div>
+                <div class="shop-item">
+                    <img src="assets/cosmetic.jpg" alt="Organic Cosmetics">
+                    <h3>Organic Cosmetics</h3>
+                    <p>Natural and organic beauty products</p>
+                    <button class="shop-button">Trade Now</button>
+                </div>
+                <div class="shop-item">
+                    <img src="assets/organic-food.jpg" alt="Organic Food">
+                    <h3>Organic Food</h3>
+                    <p>Fresh organic produce and products</p>
+                    <button class="shop-button">Trade Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works" id="how-it-works">
+            <h2>How BarterBee Works</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-user-plus"></i>
+                    <h3>Create Account</h3>
+                    <p>Sign up and create your profile</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-box"></i>
+                    <h3>List Items</h3>
+                    <p>Upload items you want to trade</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-search"></i>
+                    <h3>Find Matches</h3>
+                    <p>Browse and find items you want</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <i class="fas fa-handshake"></i>
+                    <h3>Trade</h3>
+                    <p>Complete secure transactions</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials" id="testimonials">
+            <h2>What Our Users Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"BarterBee made trading so easy! I found exactly what I needed."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/user1.jpg" alt="Pathak">
+                        <div>
+                            <h4>Pathak</h4>
+                            <p>Verified User</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"The community is amazing and the platform is very secure."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/user2.jpg" alt="Ruchika">
+                        <div>
+                            <h4>Ruchika</h4>
+                            <p>Verified User</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"Best bartering platform I've ever used. Highly recommended!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/user3.jpg" alt="Rakesh">
+                        <div>
+                            <h4>Rakesh</h4>
+                            <p>Verified User</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter" id="newsletter">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for the latest updates and exclusive offers</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#shipping">Shipping & Returns</a></li>
+                        <li><a href="#policy">Store Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h4>CONTACT US</h4>
+                <p><i class="fas fa-phone"></i> +91 9463190860</p>
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@barterbee.com">info@barterbee.com</a></p>
+            </div>
+            <div class="footer-form">
+                <h4>Get in Touch</h4>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 BarterBee. Powered and secured by Chandigarh University.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
